@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+service UserService {
+	rpc Signup (SignupRequest) returns (SignupResponse);
+}
+
+message SignupRequest {
+	string username = 1;
+	string email = 2;
+}
+
+message SignupResponse {
+	string id = 1;
+}
