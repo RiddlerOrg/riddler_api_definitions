@@ -4,10 +4,11 @@ package api;
 import "google/protobuf/empty.proto";
 
 service PrizeService {
-	rpc GetCurrentPrize (google.protobuf.Empty) returns (CurrentPrizeResponse);
+	rpc GetCurrentPrize (google.protobuf.Empty) returns (GetCurrentPrizeResponse);
 }
 
-message CurrentPrizeResponse {
-	bool isWon = 1;
-	repeated string photos = 2;
+message GetCurrentPrizeResponse {
+	uint64 id = 1;
+	bool isWon = 2;
+	repeated string photos = 3;
 }
