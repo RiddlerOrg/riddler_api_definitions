@@ -1,10 +1,10 @@
 syntax = "proto3";
 package api;
 
-import "google/protobuf/empty.proto";
+import "util.proto";
 
 service PrizeService {
-	rpc GetCurrentPrize (google.protobuf.Empty) returns (GetCurrentPrizeResponse);
+	rpc GetCurrentPrize (Empty) returns (GetCurrentPrizeResponse);
 }
 
 message GetCurrentPrizeResponse {
