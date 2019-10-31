@@ -1,0 +1,13 @@
+syntax = "proto3";
+package api;
+
+import "google/protobuf/empty.proto";
+
+service PrizeService {
+	rpc GetCurrentPrize (google.protobuf.Empty) returns (CurrentPrizeResponse);
+}
+
+message CurrentPrizeResponse {
+	bool isWon = 1;
+	repeated string photos = 2;
+}
