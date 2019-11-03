@@ -9,6 +9,7 @@ service PrizeService {
 
 message GetCurrentPrizeResponse {
 	uint64 id = 1;
-	bool isWon = 2;
-	repeated string photos = 3;
+	string title = 2;
+	bool isWon = 3;
+	repeated string photos = 4;
 }
