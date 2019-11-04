@@ -12,4 +12,5 @@ message GetCurrentPrizeResponse {
 	string title = 2;
 	bool isWon = 3;
 	repeated string photos = 4;
+	string riddle = 5;
 }
