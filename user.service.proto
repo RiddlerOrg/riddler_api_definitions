@@ -1,15 +1,14 @@
 syntax = "proto3";
 package api;
 
+import "util.proto";
+
 service UserService {
-	rpc Signup (SignupRequest) returns (SignupResponse);
+	rpc Signup (SignupRequest) returns (Empty);
 }
 
 message SignupRequest {
-	string username = 1;
-	string email = 2;
-}
-
-message SignupResponse {
-	uint64 id = 1;
+	string firebaseUid = 1;
+	string username = 2;
+	string email = 3;
 }
