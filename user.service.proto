@@ -5,10 +5,17 @@ import "util.proto";
 
 service UserService {
 	rpc Signup (SignupRequest) returns (Empty);
+	rpc GetCurrentUser(Empty) returns (GetCurrentUserResponse);
 }
 
 message SignupRequest {
 	string firebaseUid = 1;
+	string username = 2;
+	string email = 3;
+}
+
+message GetCurrentUserResponse {
+	uint64 id = 1;
 	string username = 2;
 	string email = 3;
 }
