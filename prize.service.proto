@@ -5,7 +5,7 @@ import "util.proto";
 
 service PrizeService {
 	rpc GetCurrentPrize (Empty) returns (GetCurrentPrizeResponse);
-	rpc AnswerRiddle(AnswerRiddleRequest) returns (Empty);
+	rpc AnswerRiddle(AnswerRiddleRequest) returns (AnswerRiddleResponse);
 }
 
 message GetCurrentPrizeResponse {
@@ -18,4 +18,8 @@ message GetCurrentPrizeResponse {
 
 message AnswerRiddleRequest {
 	string answer = 1;
+}
+
+message AnswerRiddleResponse {
+	bool isCorrect = 1;
 }
