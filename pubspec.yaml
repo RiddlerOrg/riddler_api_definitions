@@ -1,1 +1,4 @@
 name: "riddler_api_definitions"
+
+environment:
+  sdk: ">=2.3.0 <3.0.0"
