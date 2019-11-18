@@ -14,4 +14,8 @@ First you will need to add the following section to `~/.gitconfig`.
 
 ### Go
 
-`protoc -I . $(find . -iname "*.proto") --go_out=plugins=grpc:generated/go/`
+`protoc -I . $(find . -iname "*.proto") --go_out=plugins=grpc:lib/go/`
+
+### Dart
+
+`protoc -I . $(find . -iname "*.proto") --dart_out=grpc:lib/dart`
