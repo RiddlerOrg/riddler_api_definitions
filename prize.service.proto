@@ -15,6 +15,7 @@ message GetCurrentPrizeResponse {
 	repeated string photos = 4;
 	string riddle = 5;
 	uint64 guessCount = 6;
+	uint64 availableHints = 7;
 }
 
 message AnswerRiddleRequest {

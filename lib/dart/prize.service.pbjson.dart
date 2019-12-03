@@ -14,6 +14,7 @@ const GetCurrentPrizeResponse$json = const {
     const {'1': 'photos', '3': 4, '4': 3, '5': 9, '10': 'photos'},
     const {'1': 'riddle', '3': 5, '4': 1, '5': 9, '10': 'riddle'},
     const {'1': 'guessCount', '3': 6, '4': 1, '5': 4, '10': 'guessCount'},
+    const {'1': 'availableHints', '3': 7, '4': 1, '5': 4, '10': 'availableHints'},
   ],
 };
 

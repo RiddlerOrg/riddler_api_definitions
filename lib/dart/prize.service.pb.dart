@@ -18,6 +18,7 @@ class GetCurrentPrizeResponse extends $pb.GeneratedMessage {
     ..pPS(4, 'photos')
     ..aOS(5, 'riddle')
     ..a<$fixnum.Int64>(6, 'guessCount', $pb.PbFieldType.OU6, protoName: 'guessCount', defaultOrMaker: $fixnum.Int64.ZERO)
+    ..a<$fixnum.Int64>(7, 'availableHints', $pb.PbFieldType.OU6, protoName: 'availableHints', defaultOrMaker: $fixnum.Int64.ZERO)
     ..hasRequiredFields = false
   ;
 
@@ -83,6 +84,15 @@ class GetCurrentPrizeResponse extends $pb.GeneratedMessage {
   $core.bool hasGuessCount() => $_has(5);
   @$pb.TagNumber(6)
   void clearGuessCount() => clearField(6);
+
+  @$pb.TagNumber(7)
+  $fixnum.Int64 get availableHints => $_getI64(6);
+  @$pb.TagNumber(7)
+  set availableHints($fixnum.Int64 v) { $_setInt64(6, v); }
+  @$pb.TagNumber(7)
+  $core.bool hasAvailableHints() => $_has(6);
+  @$pb.TagNumber(7)
+  void clearAvailableHints() => clearField(7);
 }
 
 class AnswerRiddleRequest extends $pb.GeneratedMessage {
