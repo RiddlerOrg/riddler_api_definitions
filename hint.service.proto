@@ -1,0 +1,12 @@
+syntax = "proto3";
+package api;
+
+import "util.proto";
+
+service HintService {
+	rpc CreateCheckoutSession (Empty) returns (CreateCheckoutSessionResponse);
+}
+
+message CreateCheckoutSessionResponse {
+	string checkoutSessionId = 1;
+}
