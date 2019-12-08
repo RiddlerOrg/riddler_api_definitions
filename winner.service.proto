@@ -1,0 +1,17 @@
+syntax = "proto3";
+package api;
+
+import "util.proto";
+
+service WinnerService {
+	rpc GetWinners (Empty) returns (repeated GetWinnersResponse);
+}
+
+message GetWinnersResponse {
+	uint64 id = 1;
+	string name = 2;
+	uint64 userid = 3;
+	string prizeName = 4;
+	string prizePhotoUrl = 5;
+	string winnerPhotoUrl = 6;
+}
