@@ -4,7 +4,7 @@ package api;
 import "util.proto";
 
 service WinnerService {
-	rpc GetWinners (Empty) returns (repeated GetWinnersResponse);
+	rpc GetWinners (Empty) returns (stream GetWinnersResponse);
 }
 
 message GetWinnersResponse {
