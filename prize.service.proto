@@ -16,6 +16,7 @@ message GetCurrentPrizeResponse {
 	string riddle = 5;
 	uint64 guessCount = 6;
 	uint64 availableHints = 7;
+	repeated string unlockedHints = 8;
 }
 
 message AnswerRiddleRequest {
