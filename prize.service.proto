@@ -1,6 +1,7 @@
 syntax = "proto3";
 package api;
 
+import "google/protobuf/timestamp.proto";
 import "util.proto";
 
 service PrizeService {
@@ -17,6 +18,7 @@ message GetCurrentPrizeResponse {
 	uint64 guessCount = 6;
 	uint64 availableHints = 7;
 	repeated string unlockedHints = 8;
+	google.protobuf.Timestamp soonestNextHintPurchase = 9;
 }
 
 message AnswerRiddleRequest {
