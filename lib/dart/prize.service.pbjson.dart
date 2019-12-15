@@ -16,7 +16,7 @@ const GetCurrentPrizeResponse$json = const {
     const {'1': 'guessCount', '3': 6, '4': 1, '5': 4, '10': 'guessCount'},
     const {'1': 'availableHints', '3': 7, '4': 1, '5': 4, '10': 'availableHints'},
     const {'1': 'unlockedHints', '3': 8, '4': 3, '5': 9, '10': 'unlockedHints'},
-    const {'1': 'soonestNextHintPurchase', '3': 9, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '10': 'soonestNextHintPurchase'},
+    const {'1': 'soonestNextHintPurchase', '3': 9, '4': 1, '5': 3, '10': 'soonestNextHintPurchase'},
   ],
 };
 

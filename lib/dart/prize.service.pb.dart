@@ -10,8 +10,6 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'google/protobuf/timestamp.pb.dart' as $5;
-
 class GetCurrentPrizeResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetCurrentPrizeResponse', package: const $pb.PackageName('api'), createEmptyInstance: create)
     ..a<$fixnum.Int64>(1, 'id', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
@@ -22,7 +20,7 @@ class GetCurrentPrizeResponse extends $pb.GeneratedMessage {
     ..a<$fixnum.Int64>(6, 'guessCount', $pb.PbFieldType.OU6, protoName: 'guessCount', defaultOrMaker: $fixnum.Int64.ZERO)
     ..a<$fixnum.Int64>(7, 'availableHints', $pb.PbFieldType.OU6, protoName: 'availableHints', defaultOrMaker: $fixnum.Int64.ZERO)
     ..pPS(8, 'unlockedHints', protoName: 'unlockedHints')
-    ..aOM<$5.Timestamp>(9, 'soonestNextHintPurchase', protoName: 'soonestNextHintPurchase', subBuilder: $5.Timestamp.create)
+    ..aInt64(9, 'soonestNextHintPurchase', protoName: 'soonestNextHintPurchase')
     ..hasRequiredFields = false
   ;
 
@@ -102,15 +100,13 @@ class GetCurrentPrizeResponse extends $pb.GeneratedMessage {
   $core.List<$core.String> get unlockedHints => $_getList(7);
 
   @$pb.TagNumber(9)
-  $5.Timestamp get soonestNextHintPurchase => $_getN(8);
+  $fixnum.Int64 get soonestNextHintPurchase => $_getI64(8);
   @$pb.TagNumber(9)
-  set soonestNextHintPurchase($5.Timestamp v) { setField(9, v); }
+  set soonestNextHintPurchase($fixnum.Int64 v) { $_setInt64(8, v); }
   @$pb.TagNumber(9)
   $core.bool hasSoonestNextHintPurchase() => $_has(8);
   @$pb.TagNumber(9)
   void clearSoonestNextHintPurchase() => clearField(9);
-  @$pb.TagNumber(9)
-  $5.Timestamp ensureSoonestNextHintPurchase() => $_ensure(8);
 }
 
 class AnswerRiddleRequest extends $pb.GeneratedMessage {
