@@ -18,4 +18,6 @@ message GetCurrentUserResponse {
 	uint64 id = 1;
 	string username = 2;
 	string email = 3;
+	uint64 guessTokens = 4;
+	int64 soonestNextGuessPurchase = 5;
 }
