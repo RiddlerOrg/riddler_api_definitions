@@ -20,6 +20,8 @@ const GetCurrentUserResponse$json = const {
     const {'1': 'id', '3': 1, '4': 1, '5': 4, '10': 'id'},
     const {'1': 'username', '3': 2, '4': 1, '5': 9, '10': 'username'},
     const {'1': 'email', '3': 3, '4': 1, '5': 9, '10': 'email'},
+    const {'1': 'guessTokens', '3': 4, '4': 1, '5': 4, '10': 'guessTokens'},
+    const {'1': 'soonestNextGuessPurchase', '3': 5, '4': 1, '5': 3, '10': 'soonestNextGuessPurchase'},
   ],
 };
 
