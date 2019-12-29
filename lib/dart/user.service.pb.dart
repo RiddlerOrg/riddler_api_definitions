@@ -67,7 +67,7 @@ class GetCurrentUserResponse extends $pb.GeneratedMessage {
     ..aOS(2, 'username')
     ..aOS(3, 'email')
     ..a<$fixnum.Int64>(4, 'guessTokens', $pb.PbFieldType.OU6, protoName: 'guessTokens', defaultOrMaker: $fixnum.Int64.ZERO)
-    ..aInt64(5, 'soonestNextGuessPurchase', protoName: 'soonestNextGuessPurchase')
+    ..aInt64(5, 'soonestNextGuess', protoName: 'soonestNextGuess')
     ..hasRequiredFields = false
   ;
 
@@ -123,12 +123,12 @@ class GetCurrentUserResponse extends $pb.GeneratedMessage {
   void clearGuessTokens() => clearField(4);
 
   @$pb.TagNumber(5)
-  $fixnum.Int64 get soonestNextGuessPurchase => $_getI64(4);
+  $fixnum.Int64 get soonestNextGuess => $_getI64(4);
   @$pb.TagNumber(5)
-  set soonestNextGuessPurchase($fixnum.Int64 v) { $_setInt64(4, v); }
+  set soonestNextGuess($fixnum.Int64 v) { $_setInt64(4, v); }
   @$pb.TagNumber(5)
-  $core.bool hasSoonestNextGuessPurchase() => $_has(4);
+  $core.bool hasSoonestNextGuess() => $_has(4);
   @$pb.TagNumber(5)
-  void clearSoonestNextGuessPurchase() => clearField(5);
+  void clearSoonestNextGuess() => clearField(5);
 }
 
