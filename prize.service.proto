@@ -18,6 +18,7 @@ message GetCurrentPrizeResponse {
 	uint64 availableHints = 7;
 	repeated string unlockedHints = 8;
 	int64 soonestNextHintPurchase = 9;
+	float marketPrice = 10;
 }
 
 message AnswerRiddleRequest {

@@ -21,6 +21,7 @@ class GetCurrentPrizeResponse extends $pb.GeneratedMessage {
     ..a<$fixnum.Int64>(7, 'availableHints', $pb.PbFieldType.OU6, protoName: 'availableHints', defaultOrMaker: $fixnum.Int64.ZERO)
     ..pPS(8, 'unlockedHints', protoName: 'unlockedHints')
     ..aInt64(9, 'soonestNextHintPurchase', protoName: 'soonestNextHintPurchase')
+    ..a<$core.double>(10, 'marketPrice', $pb.PbFieldType.OF, protoName: 'marketPrice')
     ..hasRequiredFields = false
   ;
 
@@ -107,6 +108,15 @@ class GetCurrentPrizeResponse extends $pb.GeneratedMessage {
   $core.bool hasSoonestNextHintPurchase() => $_has(8);
   @$pb.TagNumber(9)
   void clearSoonestNextHintPurchase() => clearField(9);
+
+  @$pb.TagNumber(10)
+  $core.double get marketPrice => $_getN(9);
+  @$pb.TagNumber(10)
+  set marketPrice($core.double v) { $_setFloat(9, v); }
+  @$pb.TagNumber(10)
+  $core.bool hasMarketPrice() => $_has(9);
+  @$pb.TagNumber(10)
+  void clearMarketPrice() => clearField(10);
 }
 
 class AnswerRiddleRequest extends $pb.GeneratedMessage {
