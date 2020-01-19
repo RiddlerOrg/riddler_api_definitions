@@ -9,9 +9,10 @@ service WinnerService {
 
 message GetWinnersResponse {
 	uint64 id = 1;
-	string name = 2;
-	uint64 userid = 3;
-	string prizeName = 4;
-	string prizePhotoUrl = 5;
-	string winnerPhotoUrl = 6;
+	string prizeTitle = 2;
+	float prizeMarketPrice = 3;
+	uint64 guessCount = 4;
+	string riddle = 5;
+	string acceptedAnswer = 6;
+	int64 timeOfWin = 7;
 }
