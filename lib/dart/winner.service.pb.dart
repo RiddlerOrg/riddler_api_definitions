@@ -12,12 +12,7 @@ import 'package:protobuf/protobuf.dart' as $pb;
 
 class GetWinnersResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetWinnersResponse', package: const $pb.PackageName('api'), createEmptyInstance: create)
-    ..aOS(1, 'prizeTitle', protoName: 'prizeTitle')
-    ..a<$core.double>(2, 'prizeMarketPrice', $pb.PbFieldType.OF, protoName: 'prizeMarketPrice')
-    ..a<$fixnum.Int64>(3, 'guessCount', $pb.PbFieldType.OU6, protoName: 'guessCount', defaultOrMaker: $fixnum.Int64.ZERO)
-    ..aOS(4, 'riddle')
-    ..aOS(5, 'acceptedAnswer', protoName: 'acceptedAnswer')
-    ..aInt64(6, 'timeOfWin', protoName: 'timeOfWin')
+    ..pc<Winner>(1, 'winners', $pb.PbFieldType.PM, subBuilder: Winner.create)
     ..hasRequiredFields = false
   ;
 
@@ -35,6 +30,36 @@ class GetWinnersResponse extends $pb.GeneratedMessage {
   @$core.pragma('dart2js:noInline')
   static GetWinnersResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<GetWinnersResponse>(create);
   static GetWinnersResponse _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<Winner> get winners => $_getList(0);
+}
+
+class Winner extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Winner', package: const $pb.PackageName('api'), createEmptyInstance: create)
+    ..aOS(1, 'prizeTitle', protoName: 'prizeTitle')
+    ..a<$core.double>(2, 'prizeMarketPrice', $pb.PbFieldType.OF, protoName: 'prizeMarketPrice')
+    ..a<$fixnum.Int64>(3, 'guessCount', $pb.PbFieldType.OU6, protoName: 'guessCount', defaultOrMaker: $fixnum.Int64.ZERO)
+    ..aOS(4, 'riddle')
+    ..aOS(5, 'acceptedAnswer', protoName: 'acceptedAnswer')
+    ..aInt64(6, 'timeOfWin', protoName: 'timeOfWin')
+    ..hasRequiredFields = false
+  ;
+
+  Winner._() : super();
+  factory Winner() => create();
+  factory Winner.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory Winner.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  Winner clone() => Winner()..mergeFromMessage(this);
+  Winner copyWith(void Function(Winner) updates) => super.copyWith((message) => updates(message as Winner));
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static Winner create() => Winner._();
+  Winner createEmptyInstance() => create();
+  static $pb.PbList<Winner> createRepeated() => $pb.PbList<Winner>();
+  @$core.pragma('dart2js:noInline')
+  static Winner getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Winner>(create);
+  static Winner _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get prizeTitle => $_getSZ(0);

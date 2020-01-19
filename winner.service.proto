@@ -4,10 +4,14 @@ package api;
 import "util.proto";
 
 service WinnerService {
-	rpc GetWinners (Empty) returns (stream GetWinnersResponse);
+	rpc GetWinners (Empty) returns (GetWinnersResponse);
 }
 
 message GetWinnersResponse {
+	repeated Winner winners = 1;
+}
+
+message Winner {
 	string prizeTitle = 1;
 	float prizeMarketPrice = 2;
 	uint64 guessCount = 3;

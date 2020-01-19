@@ -25,15 +25,10 @@ var _ = math.Inf
 const _ = proto.ProtoPackageIsVersion3 // please upgrade the proto package
 
 type GetWinnersResponse struct {
-	PrizeTitle           string   `protobuf:"bytes,1,opt,name=prizeTitle,proto3" json:"prizeTitle,omitempty"`
-	PrizeMarketPrice     float32  `protobuf:"fixed32,2,opt,name=prizeMarketPrice,proto3" json:"prizeMarketPrice,omitempty"`
-	GuessCount           uint64   `protobuf:"varint,3,opt,name=guessCount,proto3" json:"guessCount,omitempty"`
-	Riddle               string   `protobuf:"bytes,4,opt,name=riddle,proto3" json:"riddle,omitempty"`
-	AcceptedAnswer       string   `protobuf:"bytes,5,opt,name=acceptedAnswer,proto3" json:"acceptedAnswer,omitempty"`
-	TimeOfWin            int64    `protobuf:"varint,6,opt,name=timeOfWin,proto3" json:"timeOfWin,omitempty"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	Winners              []*Winner `protobuf:"bytes,1,rep,name=winners,proto3" json:"winners,omitempty"`
+	XXX_NoUnkeyedLiteral struct{}  `json:"-"`
+	XXX_unrecognized     []byte    `json:"-"`
+	XXX_sizecache        int32     `json:"-"`
 }
 
 func (m *GetWinnersResponse) Reset()         { *m = GetWinnersResponse{} }
@@ -61,42 +56,86 @@ func (m *GetWinnersResponse) XXX_DiscardUnknown() {
 
 var xxx_messageInfo_GetWinnersResponse proto.InternalMessageInfo
 
-func (m *GetWinnersResponse) GetPrizeTitle() string {
+func (m *GetWinnersResponse) GetWinners() []*Winner {
+	if m != nil {
+		return m.Winners
+	}
+	return nil
+}
+
+type Winner struct {
+	PrizeTitle           string   `protobuf:"bytes,1,opt,name=prizeTitle,proto3" json:"prizeTitle,omitempty"`
+	PrizeMarketPrice     float32  `protobuf:"fixed32,2,opt,name=prizeMarketPrice,proto3" json:"prizeMarketPrice,omitempty"`
+	GuessCount           uint64   `protobuf:"varint,3,opt,name=guessCount,proto3" json:"guessCount,omitempty"`
+	Riddle               string   `protobuf:"bytes,4,opt,name=riddle,proto3" json:"riddle,omitempty"`
+	AcceptedAnswer       string   `protobuf:"bytes,5,opt,name=acceptedAnswer,proto3" json:"acceptedAnswer,omitempty"`
+	TimeOfWin            int64    `protobuf:"varint,6,opt,name=timeOfWin,proto3" json:"timeOfWin,omitempty"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-"`
+	XXX_unrecognized     []byte   `json:"-"`
+	XXX_sizecache        int32    `json:"-"`
+}
+
+func (m *Winner) Reset()         { *m = Winner{} }
+func (m *Winner) String() string { return proto.CompactTextString(m) }
+func (*Winner) ProtoMessage()    {}
+func (*Winner) Descriptor() ([]byte, []int) {
+	return fileDescriptor_f814ad39e50705d2, []int{1}
+}
+
+func (m *Winner) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_Winner.Unmarshal(m, b)
+}
+func (m *Winner) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_Winner.Marshal(b, m, deterministic)
+}
+func (m *Winner) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_Winner.Merge(m, src)
+}
+func (m *Winner) XXX_Size() int {
+	return xxx_messageInfo_Winner.Size(m)
+}
+func (m *Winner) XXX_DiscardUnknown() {
+	xxx_messageInfo_Winner.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_Winner proto.InternalMessageInfo
+
+func (m *Winner) GetPrizeTitle() string {
 	if m != nil {
 		return m.PrizeTitle
 	}
 	return ""
 }
 
-func (m *GetWinnersResponse) GetPrizeMarketPrice() float32 {
+func (m *Winner) GetPrizeMarketPrice() float32 {
 	if m != nil {
 		return m.PrizeMarketPrice
 	}
 	return 0
 }
 
-func (m *GetWinnersResponse) GetGuessCount() uint64 {
+func (m *Winner) GetGuessCount() uint64 {
 	if m != nil {
 		return m.GuessCount
 	}
 	return 0
 }
 
-func (m *GetWinnersResponse) GetRiddle() string {
+func (m *Winner) GetRiddle() string {
 	if m != nil {
 		return m.Riddle
 	}
 	return ""
 }
 
-func (m *GetWinnersResponse) GetAcceptedAnswer() string {
+func (m *Winner) GetAcceptedAnswer() string {
 	if m != nil {
 		return m.AcceptedAnswer
 	}
 	return ""
 }
 
-func (m *GetWinnersResponse) GetTimeOfWin() int64 {
+func (m *Winner) GetTimeOfWin() int64 {
 	if m != nil {
 		return m.TimeOfWin
 	}
@@ -105,28 +144,30 @@ func (m *GetWinnersResponse) GetTimeOfWin() int64 {
 
 func init() {
 	proto.RegisterType((*GetWinnersResponse)(nil), "api.GetWinnersResponse")
+	proto.RegisterType((*Winner)(nil), "api.Winner")
 }
 
 func init() { proto.RegisterFile("winner.service.proto", fileDescriptor_f814ad39e50705d2) }
 
 var fileDescriptor_f814ad39e50705d2 = []byte{
-	// 242 bytes of a gzipped FileDescriptorProto
-	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0x64, 0x90, 0xc1, 0x4a, 0xc4, 0x30,
-	0x10, 0x86, 0xc9, 0x76, 0x2d, 0xec, 0x80, 0x22, 0x83, 0x68, 0x58, 0x44, 0x8a, 0x07, 0x29, 0x1e,
-	0x8a, 0xb8, 0x4f, 0x20, 0x2a, 0x9e, 0x44, 0x89, 0xc2, 0x9e, 0x6b, 0x3b, 0xca, 0x60, 0x37, 0x09,
-	0xc9, 0xd4, 0x45, 0x1f, 0xd6, 0x67, 0x11, 0x53, 0x61, 0x17, 0x7b, 0xcb, 0xff, 0x65, 0x98, 0xe1,
-	0xff, 0xe0, 0x60, 0xcd, 0xd6, 0x52, 0xa8, 0x22, 0x85, 0x0f, 0x6e, 0xa8, 0xf2, 0xc1, 0x89, 0xc3,
-	0xac, 0xf6, 0x3c, 0x87, 0x5e, 0xb8, 0x1b, 0xc0, 0xe9, 0xb7, 0x02, 0xbc, 0x23, 0x59, 0xa6, 0xe1,
-	0x68, 0x28, 0x7a, 0x67, 0x23, 0xe1, 0x09, 0x80, 0x0f, 0xfc, 0x45, 0xcf, 0x2c, 0x1d, 0x69, 0x55,
-	0xa8, 0x72, 0x66, 0xb6, 0x08, 0x9e, 0xc3, 0x7e, 0x4a, 0xf7, 0x75, 0x78, 0x27, 0x79, 0x0c, 0xdc,
-	0x90, 0x9e, 0x14, 0xaa, 0x9c, 0x98, 0x11, 0xff, 0xdd, 0xf5, 0xd6, 0x53, 0x8c, 0xd7, 0xae, 0xb7,
-	0xa2, 0xb3, 0x42, 0x95, 0x53, 0xb3, 0x45, 0xf0, 0x10, 0xf2, 0xc0, 0x6d, 0xdb, 0x91, 0x9e, 0xa6,
-	0x3b, 0x7f, 0x09, 0xcf, 0x60, 0xaf, 0x6e, 0x1a, 0xf2, 0x42, 0xed, 0x95, 0x8d, 0x6b, 0x0a, 0x7a,
-	0x27, 0xfd, 0xff, 0xa3, 0x78, 0x0c, 0x33, 0xe1, 0x15, 0x3d, 0xbc, 0x2e, 0xd9, 0xea, 0xbc, 0x50,
-	0x65, 0x66, 0x36, 0xe0, 0xf2, 0x06, 0x76, 0x87, 0x72, 0x4f, 0x83, 0x08, 0x5c, 0x00, 0x6c, 0x0a,
-	0x23, 0x54, 0xb5, 0xe7, 0xea, 0x76, 0xe5, 0xe5, 0x73, 0x7e, 0x94, 0xde, 0x63, 0x1b, 0x17, 0xea,
-	0x25, 0x4f, 0xb6, 0x16, 0x3f, 0x01, 0x00, 0x00, 0xff, 0xff, 0xca, 0x90, 0x78, 0xdc, 0x56, 0x01,
-	0x00, 0x00,
+	// 265 bytes of a gzipped FileDescriptorProto
+	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0x64, 0x90, 0x41, 0x4b, 0x33, 0x31,
+	0x10, 0x86, 0x49, 0xb7, 0xdf, 0x7e, 0x74, 0x8a, 0x22, 0x83, 0x68, 0x28, 0x22, 0x4b, 0x41, 0x09,
+	0x1e, 0x16, 0xac, 0x47, 0x4f, 0x2a, 0xe2, 0x49, 0x94, 0x28, 0xf4, 0xbc, 0xee, 0x8e, 0x32, 0xb8,
+	0xcd, 0x86, 0x24, 0x6b, 0xd1, 0x9f, 0xe9, 0x2f, 0x12, 0x13, 0xa5, 0xc5, 0xde, 0x32, 0xcf, 0xfb,
+	0x26, 0x61, 0x1e, 0xd8, 0x5d, 0xb2, 0x31, 0xe4, 0x4a, 0x4f, 0xee, 0x8d, 0x6b, 0x2a, 0xad, 0xeb,
+	0x42, 0x87, 0x59, 0x65, 0x79, 0x02, 0x7d, 0xe0, 0x36, 0x81, 0xe9, 0x39, 0xe0, 0x0d, 0x85, 0x79,
+	0xec, 0x7a, 0x4d, 0xde, 0x76, 0xc6, 0x13, 0x1e, 0xc1, 0xff, 0x74, 0xdd, 0x4b, 0x51, 0x64, 0x6a,
+	0x3c, 0x1b, 0x97, 0x95, 0xe5, 0x32, 0xd5, 0xf4, 0x6f, 0x36, 0xfd, 0x14, 0x90, 0x27, 0x86, 0x87,
+	0x00, 0xd6, 0xf1, 0x07, 0x3d, 0x72, 0x68, 0x49, 0x8a, 0x42, 0xa8, 0x91, 0x5e, 0x23, 0x78, 0x02,
+	0x3b, 0x71, 0xba, 0xad, 0xdc, 0x2b, 0x85, 0x7b, 0xc7, 0x35, 0xc9, 0x41, 0x21, 0xd4, 0x40, 0x6f,
+	0xf0, 0xef, 0xb7, 0x5e, 0x7a, 0xf2, 0xfe, 0xaa, 0xeb, 0x4d, 0x90, 0x59, 0x21, 0xd4, 0x50, 0xaf,
+	0x11, 0xdc, 0x83, 0xdc, 0x71, 0xd3, 0xb4, 0x24, 0x87, 0xf1, 0x9f, 0x9f, 0x09, 0x8f, 0x61, 0xbb,
+	0xaa, 0x6b, 0xb2, 0x81, 0x9a, 0x0b, 0xe3, 0x97, 0xe4, 0xe4, 0xbf, 0x98, 0xff, 0xa1, 0x78, 0x00,
+	0xa3, 0xc0, 0x0b, 0xba, 0x7b, 0x9e, 0xb3, 0x91, 0x79, 0x21, 0x54, 0xa6, 0x57, 0x60, 0x76, 0x09,
+	0x5b, 0x69, 0xa7, 0x87, 0x64, 0x0e, 0x4f, 0x01, 0x56, 0x8a, 0x10, 0xa2, 0x89, 0xeb, 0x85, 0x0d,
+	0xef, 0x93, 0xfd, 0x78, 0xde, 0xf4, 0xf7, 0x94, 0x47, 0xb9, 0x67, 0x5f, 0x01, 0x00, 0x00, 0xff,
+	0xff, 0xf4, 0x7b, 0x90, 0x8e, 0x85, 0x01, 0x00, 0x00,
 }
 
 // Reference imports to suppress errors if they are not otherwise used.
@@ -141,7 +182,7 @@ const _ = grpc.SupportPackageIsVersion4
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/google.golang.org/grpc#ClientConn.NewStream.
 type WinnerServiceClient interface {
-	GetWinners(ctx context.Context, in *Empty, opts ...grpc.CallOption) (WinnerService_GetWinnersClient, error)
+	GetWinners(ctx context.Context, in *Empty, opts ...grpc.CallOption) (*GetWinnersResponse, error)
 }
 
 type winnerServiceClient struct {
@@ -152,86 +193,59 @@ func NewWinnerServiceClient(cc *grpc.ClientConn) WinnerServiceClient {
 	return &winnerServiceClient{cc}
 }
 
-func (c *winnerServiceClient) GetWinners(ctx context.Context, in *Empty, opts ...grpc.CallOption) (WinnerService_GetWinnersClient, error) {
-	stream, err := c.cc.NewStream(ctx, &_WinnerService_serviceDesc.Streams[0], "/api.WinnerService/GetWinners", opts...)
+func (c *winnerServiceClient) GetWinners(ctx context.Context, in *Empty, opts ...grpc.CallOption) (*GetWinnersResponse, error) {
+	out := new(GetWinnersResponse)
+	err := c.cc.Invoke(ctx, "/api.WinnerService/GetWinners", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
-	x := &winnerServiceGetWinnersClient{stream}
-	if err := x.ClientStream.SendMsg(in); err != nil {
-		return nil, err
-	}
-	if err := x.ClientStream.CloseSend(); err != nil {
-		return nil, err
-	}
-	return x, nil
-}
-
-type WinnerService_GetWinnersClient interface {
-	Recv() (*GetWinnersResponse, error)
-	grpc.ClientStream
-}
-
-type winnerServiceGetWinnersClient struct {
-	grpc.ClientStream
-}
-
-func (x *winnerServiceGetWinnersClient) Recv() (*GetWinnersResponse, error) {
-	m := new(GetWinnersResponse)
-	if err := x.ClientStream.RecvMsg(m); err != nil {
-		return nil, err
-	}
-	return m, nil
+	return out, nil
 }
 
 // WinnerServiceServer is the server API for WinnerService service.
 type WinnerServiceServer interface {
-	GetWinners(*Empty, WinnerService_GetWinnersServer) error
+	GetWinners(context.Context, *Empty) (*GetWinnersResponse, error)
 }
 
 // UnimplementedWinnerServiceServer can be embedded to have forward compatible implementations.
 type UnimplementedWinnerServiceServer struct {
 }
 
-func (*UnimplementedWinnerServiceServer) GetWinners(req *Empty, srv WinnerService_GetWinnersServer) error {
-	return status.Errorf(codes.Unimplemented, "method GetWinners not implemented")
+func (*UnimplementedWinnerServiceServer) GetWinners(ctx context.Context, req *Empty) (*GetWinnersResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetWinners not implemented")
 }
 
 func RegisterWinnerServiceServer(s *grpc.Server, srv WinnerServiceServer) {
 	s.RegisterService(&_WinnerService_serviceDesc, srv)
 }
 
-func _WinnerService_GetWinners_Handler(srv interface{}, stream grpc.ServerStream) error {
-	m := new(Empty)
-	if err := stream.RecvMsg(m); err != nil {
-		return err
+func _WinnerService_GetWinners_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(Empty)
+	if err := dec(in); err != nil {
+		return nil, err
 	}
-	return srv.(WinnerServiceServer).GetWinners(m, &winnerServiceGetWinnersServer{stream})
-}
-
-type WinnerService_GetWinnersServer interface {
-	Send(*GetWinnersResponse) error
-	grpc.ServerStream
-}
-
-type winnerServiceGetWinnersServer struct {
-	grpc.ServerStream
-}
-
-func (x *winnerServiceGetWinnersServer) Send(m *GetWinnersResponse) error {
-	return x.ServerStream.SendMsg(m)
+	if interceptor == nil {
+		return srv.(WinnerServiceServer).GetWinners(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/api.WinnerService/GetWinners",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(WinnerServiceServer).GetWinners(ctx, req.(*Empty))
+	}
+	return interceptor(ctx, in, info, handler)
 }
 
 var _WinnerService_serviceDesc = grpc.ServiceDesc{
 	ServiceName: "api.WinnerService",
 	HandlerType: (*WinnerServiceServer)(nil),
-	Methods:     []grpc.MethodDesc{},
-	Streams: []grpc.StreamDesc{
+	Methods: []grpc.MethodDesc{
 		{
-			StreamName:    "GetWinners",
-			Handler:       _WinnerService_GetWinners_Handler,
-			ServerStreams: true,
+			MethodName: "GetWinners",
+			Handler:    _WinnerService_GetWinners_Handler,
 		},
 	},
+	Streams:  []grpc.StreamDesc{},
 	Metadata: "winner.service.proto",
 }

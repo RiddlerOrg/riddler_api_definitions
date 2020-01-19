@@ -8,6 +8,13 @@
 const GetWinnersResponse$json = const {
   '1': 'GetWinnersResponse',
   '2': const [
+    const {'1': 'winners', '3': 1, '4': 3, '5': 11, '6': '.api.Winner', '10': 'winners'},
+  ],
+};
+
+const Winner$json = const {
+  '1': 'Winner',
+  '2': const [
     const {'1': 'prizeTitle', '3': 1, '4': 1, '5': 9, '10': 'prizeTitle'},
     const {'1': 'prizeMarketPrice', '3': 2, '4': 1, '5': 2, '10': 'prizeMarketPrice'},
     const {'1': 'guessCount', '3': 3, '4': 1, '5': 4, '10': 'guessCount'},

@@ -25,12 +25,12 @@ class WinnerServiceClient extends $grpc.Client {
   WinnerServiceClient($grpc.ClientChannel channel, {$grpc.CallOptions options})
       : super(channel, options: options);
 
-  $grpc.ResponseStream<$1.GetWinnersResponse> getWinners($0.Empty request,
+  $grpc.ResponseFuture<$1.GetWinnersResponse> getWinners($0.Empty request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$getWinners, $async.Stream.fromIterable([request]),
         options: options);
-    return $grpc.ResponseStream(call);
+    return $grpc.ResponseFuture(call);
   }
 }
 
@@ -42,16 +42,16 @@ abstract class WinnerServiceBase extends $grpc.Service {
         'GetWinners',
         getWinners_Pre,
         false,
-        true,
+        false,
         ($core.List<$core.int> value) => $0.Empty.fromBuffer(value),
         ($1.GetWinnersResponse value) => value.writeToBuffer()));
   }
 
-  $async.Stream<$1.GetWinnersResponse> getWinners_Pre(
-      $grpc.ServiceCall call, $async.Future<$0.Empty> request) async* {
-    yield* getWinners(call, await request);
+  $async.Future<$1.GetWinnersResponse> getWinners_Pre(
+      $grpc.ServiceCall call, $async.Future<$0.Empty> request) async {
+    return getWinners(call, await request);
   }
 
-  $async.Stream<$1.GetWinnersResponse> getWinners(
+  $async.Future<$1.GetWinnersResponse> getWinners(
       $grpc.ServiceCall call, $0.Empty request);
 }
