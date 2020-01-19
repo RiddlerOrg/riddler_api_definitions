@@ -12,13 +12,12 @@ import 'package:protobuf/protobuf.dart' as $pb;
 
 class GetWinnersResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetWinnersResponse', package: const $pb.PackageName('api'), createEmptyInstance: create)
-    ..a<$fixnum.Int64>(1, 'id', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..aOS(2, 'prizeTitle', protoName: 'prizeTitle')
-    ..a<$core.double>(3, 'prizeMarketPrice', $pb.PbFieldType.OF, protoName: 'prizeMarketPrice')
-    ..a<$fixnum.Int64>(4, 'guessCount', $pb.PbFieldType.OU6, protoName: 'guessCount', defaultOrMaker: $fixnum.Int64.ZERO)
-    ..aOS(5, 'riddle')
-    ..aOS(6, 'acceptedAnswer', protoName: 'acceptedAnswer')
-    ..aInt64(7, 'timeOfWin', protoName: 'timeOfWin')
+    ..aOS(1, 'prizeTitle', protoName: 'prizeTitle')
+    ..a<$core.double>(2, 'prizeMarketPrice', $pb.PbFieldType.OF, protoName: 'prizeMarketPrice')
+    ..a<$fixnum.Int64>(3, 'guessCount', $pb.PbFieldType.OU6, protoName: 'guessCount', defaultOrMaker: $fixnum.Int64.ZERO)
+    ..aOS(4, 'riddle')
+    ..aOS(5, 'acceptedAnswer', protoName: 'acceptedAnswer')
+    ..aInt64(6, 'timeOfWin', protoName: 'timeOfWin')
     ..hasRequiredFields = false
   ;
 
@@ -38,66 +37,57 @@ class GetWinnersResponse extends $pb.GeneratedMessage {
   static GetWinnersResponse _defaultInstance;
 
   @$pb.TagNumber(1)
-  $fixnum.Int64 get id => $_getI64(0);
+  $core.String get prizeTitle => $_getSZ(0);
   @$pb.TagNumber(1)
-  set id($fixnum.Int64 v) { $_setInt64(0, v); }
+  set prizeTitle($core.String v) { $_setString(0, v); }
   @$pb.TagNumber(1)
-  $core.bool hasId() => $_has(0);
+  $core.bool hasPrizeTitle() => $_has(0);
   @$pb.TagNumber(1)
-  void clearId() => clearField(1);
+  void clearPrizeTitle() => clearField(1);
 
   @$pb.TagNumber(2)
-  $core.String get prizeTitle => $_getSZ(1);
+  $core.double get prizeMarketPrice => $_getN(1);
   @$pb.TagNumber(2)
-  set prizeTitle($core.String v) { $_setString(1, v); }
+  set prizeMarketPrice($core.double v) { $_setFloat(1, v); }
   @$pb.TagNumber(2)
-  $core.bool hasPrizeTitle() => $_has(1);
+  $core.bool hasPrizeMarketPrice() => $_has(1);
   @$pb.TagNumber(2)
-  void clearPrizeTitle() => clearField(2);
+  void clearPrizeMarketPrice() => clearField(2);
 
   @$pb.TagNumber(3)
-  $core.double get prizeMarketPrice => $_getN(2);
+  $fixnum.Int64 get guessCount => $_getI64(2);
   @$pb.TagNumber(3)
-  set prizeMarketPrice($core.double v) { $_setFloat(2, v); }
+  set guessCount($fixnum.Int64 v) { $_setInt64(2, v); }
   @$pb.TagNumber(3)
-  $core.bool hasPrizeMarketPrice() => $_has(2);
+  $core.bool hasGuessCount() => $_has(2);
   @$pb.TagNumber(3)
-  void clearPrizeMarketPrice() => clearField(3);
+  void clearGuessCount() => clearField(3);
 
   @$pb.TagNumber(4)
-  $fixnum.Int64 get guessCount => $_getI64(3);
+  $core.String get riddle => $_getSZ(3);
   @$pb.TagNumber(4)
-  set guessCount($fixnum.Int64 v) { $_setInt64(3, v); }
+  set riddle($core.String v) { $_setString(3, v); }
   @$pb.TagNumber(4)
-  $core.bool hasGuessCount() => $_has(3);
+  $core.bool hasRiddle() => $_has(3);
   @$pb.TagNumber(4)
-  void clearGuessCount() => clearField(4);
+  void clearRiddle() => clearField(4);
 
   @$pb.TagNumber(5)
-  $core.String get riddle => $_getSZ(4);
+  $core.String get acceptedAnswer => $_getSZ(4);
   @$pb.TagNumber(5)
-  set riddle($core.String v) { $_setString(4, v); }
+  set acceptedAnswer($core.String v) { $_setString(4, v); }
   @$pb.TagNumber(5)
-  $core.bool hasRiddle() => $_has(4);
+  $core.bool hasAcceptedAnswer() => $_has(4);
   @$pb.TagNumber(5)
-  void clearRiddle() => clearField(5);
+  void clearAcceptedAnswer() => clearField(5);
 
   @$pb.TagNumber(6)
-  $core.String get acceptedAnswer => $_getSZ(5);
+  $fixnum.Int64 get timeOfWin => $_getI64(5);
   @$pb.TagNumber(6)
-  set acceptedAnswer($core.String v) { $_setString(5, v); }
+  set timeOfWin($fixnum.Int64 v) { $_setInt64(5, v); }
   @$pb.TagNumber(6)
-  $core.bool hasAcceptedAnswer() => $_has(5);
+  $core.bool hasTimeOfWin() => $_has(5);
   @$pb.TagNumber(6)
-  void clearAcceptedAnswer() => clearField(6);
-
-  @$pb.TagNumber(7)
-  $fixnum.Int64 get timeOfWin => $_getI64(6);
-  @$pb.TagNumber(7)
-  set timeOfWin($fixnum.Int64 v) { $_setInt64(6, v); }
-  @$pb.TagNumber(7)
-  $core.bool hasTimeOfWin() => $_has(6);
-  @$pb.TagNumber(7)
-  void clearTimeOfWin() => clearField(7);
+  void clearTimeOfWin() => clearField(6);
 }
 

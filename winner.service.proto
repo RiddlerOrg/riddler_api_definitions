@@ -8,11 +8,10 @@ service WinnerService {
 }
 
 message GetWinnersResponse {
-	uint64 id = 1;
-	string prizeTitle = 2;
-	float prizeMarketPrice = 3;
-	uint64 guessCount = 4;
-	string riddle = 5;
-	string acceptedAnswer = 6;
-	int64 timeOfWin = 7;
+	string prizeTitle = 1;
+	float prizeMarketPrice = 2;
+	uint64 guessCount = 3;
+	string riddle = 4;
+	string acceptedAnswer = 5;
+	int64 timeOfWin = 6;
 }
