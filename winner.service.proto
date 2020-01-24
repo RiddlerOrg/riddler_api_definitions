@@ -12,13 +12,14 @@ message GetWinnersResponse {
 }
 
 message Winner {
-	string prizeTitle = 1;
-	float prizeMarketPrice = 2;
-	repeated string prizePhotos = 3;
-	uint64 guessCount = 4;
-	string riddle = 5;
-	string acceptedAnswer = 6;
-	int64 timeOfWin = 7;
-	uint64 winnerId = 8;
-	string winnerName = 9;
+	uint64 prizeId = 1;
+	string prizeTitle = 2;
+	float prizeMarketPrice = 3;
+	repeated string prizePhotos = 4;
+	uint64 guessCount = 5;
+	string riddle = 6;
+	string acceptedAnswer = 7;
+	int64 timeOfWin = 8;
+	uint64 winnerId = 9;
+	string winnerName = 10;
 }
