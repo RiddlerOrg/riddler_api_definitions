@@ -39,10 +39,13 @@ class Winner extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Winner', package: const $pb.PackageName('api'), createEmptyInstance: create)
     ..aOS(1, 'prizeTitle', protoName: 'prizeTitle')
     ..a<$core.double>(2, 'prizeMarketPrice', $pb.PbFieldType.OF, protoName: 'prizeMarketPrice')
-    ..a<$fixnum.Int64>(3, 'guessCount', $pb.PbFieldType.OU6, protoName: 'guessCount', defaultOrMaker: $fixnum.Int64.ZERO)
-    ..aOS(4, 'riddle')
-    ..aOS(5, 'acceptedAnswer', protoName: 'acceptedAnswer')
-    ..aInt64(6, 'timeOfWin', protoName: 'timeOfWin')
+    ..pPS(3, 'prizePhotos', protoName: 'prizePhotos')
+    ..a<$fixnum.Int64>(4, 'guessCount', $pb.PbFieldType.OU6, protoName: 'guessCount', defaultOrMaker: $fixnum.Int64.ZERO)
+    ..aOS(5, 'riddle')
+    ..aOS(6, 'acceptedAnswer', protoName: 'acceptedAnswer')
+    ..aInt64(7, 'timeOfWin', protoName: 'timeOfWin')
+    ..a<$fixnum.Int64>(8, 'winnerId', $pb.PbFieldType.OU6, protoName: 'winnerId', defaultOrMaker: $fixnum.Int64.ZERO)
+    ..aOS(9, 'winnerName', protoName: 'winnerName')
     ..hasRequiredFields = false
   ;
 
@@ -80,39 +83,60 @@ class Winner extends $pb.GeneratedMessage {
   void clearPrizeMarketPrice() => clearField(2);
 
   @$pb.TagNumber(3)
-  $fixnum.Int64 get guessCount => $_getI64(2);
-  @$pb.TagNumber(3)
-  set guessCount($fixnum.Int64 v) { $_setInt64(2, v); }
-  @$pb.TagNumber(3)
-  $core.bool hasGuessCount() => $_has(2);
-  @$pb.TagNumber(3)
-  void clearGuessCount() => clearField(3);
+  $core.List<$core.String> get prizePhotos => $_getList(2);
 
   @$pb.TagNumber(4)
-  $core.String get riddle => $_getSZ(3);
+  $fixnum.Int64 get guessCount => $_getI64(3);
   @$pb.TagNumber(4)
-  set riddle($core.String v) { $_setString(3, v); }
+  set guessCount($fixnum.Int64 v) { $_setInt64(3, v); }
   @$pb.TagNumber(4)
-  $core.bool hasRiddle() => $_has(3);
+  $core.bool hasGuessCount() => $_has(3);
   @$pb.TagNumber(4)
-  void clearRiddle() => clearField(4);
+  void clearGuessCount() => clearField(4);
 
   @$pb.TagNumber(5)
-  $core.String get acceptedAnswer => $_getSZ(4);
+  $core.String get riddle => $_getSZ(4);
   @$pb.TagNumber(5)
-  set acceptedAnswer($core.String v) { $_setString(4, v); }
+  set riddle($core.String v) { $_setString(4, v); }
   @$pb.TagNumber(5)
-  $core.bool hasAcceptedAnswer() => $_has(4);
+  $core.bool hasRiddle() => $_has(4);
   @$pb.TagNumber(5)
-  void clearAcceptedAnswer() => clearField(5);
+  void clearRiddle() => clearField(5);
 
   @$pb.TagNumber(6)
-  $fixnum.Int64 get timeOfWin => $_getI64(5);
+  $core.String get acceptedAnswer => $_getSZ(5);
   @$pb.TagNumber(6)
-  set timeOfWin($fixnum.Int64 v) { $_setInt64(5, v); }
+  set acceptedAnswer($core.String v) { $_setString(5, v); }
   @$pb.TagNumber(6)
-  $core.bool hasTimeOfWin() => $_has(5);
+  $core.bool hasAcceptedAnswer() => $_has(5);
   @$pb.TagNumber(6)
-  void clearTimeOfWin() => clearField(6);
+  void clearAcceptedAnswer() => clearField(6);
+
+  @$pb.TagNumber(7)
+  $fixnum.Int64 get timeOfWin => $_getI64(6);
+  @$pb.TagNumber(7)
+  set timeOfWin($fixnum.Int64 v) { $_setInt64(6, v); }
+  @$pb.TagNumber(7)
+  $core.bool hasTimeOfWin() => $_has(6);
+  @$pb.TagNumber(7)
+  void clearTimeOfWin() => clearField(7);
+
+  @$pb.TagNumber(8)
+  $fixnum.Int64 get winnerId => $_getI64(7);
+  @$pb.TagNumber(8)
+  set winnerId($fixnum.Int64 v) { $_setInt64(7, v); }
+  @$pb.TagNumber(8)
+  $core.bool hasWinnerId() => $_has(7);
+  @$pb.TagNumber(8)
+  void clearWinnerId() => clearField(8);
+
+  @$pb.TagNumber(9)
+  $core.String get winnerName => $_getSZ(8);
+  @$pb.TagNumber(9)
+  set winnerName($core.String v) { $_setString(8, v); }
+  @$pb.TagNumber(9)
+  $core.bool hasWinnerName() => $_has(8);
+  @$pb.TagNumber(9)
+  void clearWinnerName() => clearField(9);
 }
 

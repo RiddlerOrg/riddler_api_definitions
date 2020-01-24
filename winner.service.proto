@@ -14,8 +14,11 @@ message GetWinnersResponse {
 message Winner {
 	string prizeTitle = 1;
 	float prizeMarketPrice = 2;
-	uint64 guessCount = 3;
-	string riddle = 4;
-	string acceptedAnswer = 5;
-	int64 timeOfWin = 6;
+	repeated string prizePhotos = 3;
+	uint64 guessCount = 4;
+	string riddle = 5;
+	string acceptedAnswer = 6;
+	int64 timeOfWin = 7;
+	uint64 winnerId = 8;
+	string winnerName = 9;
 }
