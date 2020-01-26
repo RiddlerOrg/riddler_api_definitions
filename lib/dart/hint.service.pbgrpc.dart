@@ -21,6 +21,12 @@ class HintServiceClient extends $grpc.Client {
           ($0.Empty value) => value.writeToBuffer(),
           ($core.List<$core.int> value) =>
               $3.CreateCheckoutSessionResponse.fromBuffer(value));
+  static final _$getHintPurchaseCount =
+      $grpc.ClientMethod<$0.Empty, $3.GetHintPurchaseCountResponse>(
+          '/api.HintService/GetHintPurchaseCount',
+          ($0.Empty value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) =>
+              $3.GetHintPurchaseCountResponse.fromBuffer(value));
 
   HintServiceClient($grpc.ClientChannel channel, {$grpc.CallOptions options})
       : super(channel, options: options);
@@ -30,6 +36,15 @@ class HintServiceClient extends $grpc.Client {
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$createCheckoutSession, $async.Stream.fromIterable([request]),
+        options: options);
+    return $grpc.ResponseFuture(call);
+  }
+
+  $grpc.ResponseFuture<$3.GetHintPurchaseCountResponse> getHintPurchaseCount(
+      $0.Empty request,
+      {$grpc.CallOptions options}) {
+    final call = $createCall(
+        _$getHintPurchaseCount, $async.Stream.fromIterable([request]),
         options: options);
     return $grpc.ResponseFuture(call);
   }
@@ -46,6 +61,13 @@ abstract class HintServiceBase extends $grpc.Service {
         false,
         ($core.List<$core.int> value) => $0.Empty.fromBuffer(value),
         ($3.CreateCheckoutSessionResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.Empty, $3.GetHintPurchaseCountResponse>(
+        'GetHintPurchaseCount',
+        getHintPurchaseCount_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $0.Empty.fromBuffer(value),
+        ($3.GetHintPurchaseCountResponse value) => value.writeToBuffer()));
   }
 
   $async.Future<$3.CreateCheckoutSessionResponse> createCheckoutSession_Pre(
@@ -53,6 +75,13 @@ abstract class HintServiceBase extends $grpc.Service {
     return createCheckoutSession(call, await request);
   }
 
+  $async.Future<$3.GetHintPurchaseCountResponse> getHintPurchaseCount_Pre(
+      $grpc.ServiceCall call, $async.Future<$0.Empty> request) async {
+    return getHintPurchaseCount(call, await request);
+  }
+
   $async.Future<$3.CreateCheckoutSessionResponse> createCheckoutSession(
+      $grpc.ServiceCall call, $0.Empty request);
+  $async.Future<$3.GetHintPurchaseCountResponse> getHintPurchaseCount(
       $grpc.ServiceCall call, $0.Empty request);
 }

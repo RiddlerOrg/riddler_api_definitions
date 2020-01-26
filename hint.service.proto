@@ -5,8 +5,13 @@ import "util.proto";
 
 service HintService {
 	rpc CreateCheckoutSession (Empty) returns (CreateCheckoutSessionResponse);
+	rpc GetHintPurchaseCount (Empty) returns (GetHintPurchaseCountResponse);
 }
 
 message CreateCheckoutSessionResponse {
 	string checkoutSessionId = 1;
+}
+
+message GetHintPurchaseCountResponse {
+	uint64 hintPurchaseCount = 1;
 }

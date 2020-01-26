@@ -12,3 +12,10 @@ const CreateCheckoutSessionResponse$json = const {
   ],
 };
 
+const GetHintPurchaseCountResponse$json = const {
+  '1': 'GetHintPurchaseCountResponse',
+  '2': const [
+    const {'1': 'hintPurchaseCount', '3': 1, '4': 1, '5': 4, '10': 'hintPurchaseCount'},
+  ],
+};
+
