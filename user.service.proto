@@ -6,6 +6,7 @@ import "util.proto";
 service UserService {
 	rpc Signup (SignupRequest) returns (Empty);
 	rpc GetCurrentUser(Empty) returns (GetCurrentUserResponse);
+	rpc GetReferralToken(Empty) returns (GetReferralTokenResponse)
 }
 
 message SignupRequest {
@@ -20,4 +21,9 @@ message GetCurrentUserResponse {
 	string email = 3;
 	uint64 guessTokens = 4;
 	int64 soonestNextGuess = 5;
+}
+
+message GetReferralTokenResponse {
+	string token = 1;
+	bool isClaimed = 2;
 }
