@@ -25,3 +25,11 @@ const GetCurrentUserResponse$json = const {
   ],
 };
 
+const GetReferralTokenResponse$json = const {
+  '1': 'GetReferralTokenResponse',
+  '2': const [
+    const {'1': 'token', '3': 1, '4': 1, '5': 9, '10': 'token'},
+    const {'1': 'isClaimed', '3': 2, '4': 1, '5': 8, '10': 'isClaimed'},
+  ],
+};
+

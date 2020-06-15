@@ -132,3 +132,44 @@ class GetCurrentUserResponse extends $pb.GeneratedMessage {
   void clearSoonestNextGuess() => clearField(5);
 }
 
+class GetReferralTokenResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetReferralTokenResponse', package: const $pb.PackageName('api'), createEmptyInstance: create)
+    ..aOS(1, 'token')
+    ..aOB(2, 'isClaimed', protoName: 'isClaimed')
+    ..hasRequiredFields = false
+  ;
+
+  GetReferralTokenResponse._() : super();
+  factory GetReferralTokenResponse() => create();
+  factory GetReferralTokenResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory GetReferralTokenResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  GetReferralTokenResponse clone() => GetReferralTokenResponse()..mergeFromMessage(this);
+  GetReferralTokenResponse copyWith(void Function(GetReferralTokenResponse) updates) => super.copyWith((message) => updates(message as GetReferralTokenResponse));
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static GetReferralTokenResponse create() => GetReferralTokenResponse._();
+  GetReferralTokenResponse createEmptyInstance() => create();
+  static $pb.PbList<GetReferralTokenResponse> createRepeated() => $pb.PbList<GetReferralTokenResponse>();
+  @$core.pragma('dart2js:noInline')
+  static GetReferralTokenResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<GetReferralTokenResponse>(create);
+  static GetReferralTokenResponse _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get token => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set token($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasToken() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearToken() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.bool get isClaimed => $_getBF(1);
+  @$pb.TagNumber(2)
+  set isClaimed($core.bool v) { $_setBool(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasIsClaimed() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearIsClaimed() => clearField(2);
+}
+

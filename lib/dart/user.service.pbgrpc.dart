@@ -25,6 +25,12 @@ class UserServiceClient extends $grpc.Client {
           ($0.Empty value) => value.writeToBuffer(),
           ($core.List<$core.int> value) =>
               $4.GetCurrentUserResponse.fromBuffer(value));
+  static final _$getReferralToken =
+      $grpc.ClientMethod<$0.Empty, $4.GetReferralTokenResponse>(
+          '/api.UserService/GetReferralToken',
+          ($0.Empty value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) =>
+              $4.GetReferralTokenResponse.fromBuffer(value));
 
   UserServiceClient($grpc.ClientChannel channel, {$grpc.CallOptions options})
       : super(channel, options: options);
@@ -41,6 +47,15 @@ class UserServiceClient extends $grpc.Client {
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$getCurrentUser, $async.Stream.fromIterable([request]),
+        options: options);
+    return $grpc.ResponseFuture(call);
+  }
+
+  $grpc.ResponseFuture<$4.GetReferralTokenResponse> getReferralToken(
+      $0.Empty request,
+      {$grpc.CallOptions options}) {
+    final call = $createCall(
+        _$getReferralToken, $async.Stream.fromIterable([request]),
         options: options);
     return $grpc.ResponseFuture(call);
   }
@@ -64,6 +79,13 @@ abstract class UserServiceBase extends $grpc.Service {
         false,
         ($core.List<$core.int> value) => $0.Empty.fromBuffer(value),
         ($4.GetCurrentUserResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.Empty, $4.GetReferralTokenResponse>(
+        'GetReferralToken',
+        getReferralToken_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $0.Empty.fromBuffer(value),
+        ($4.GetReferralTokenResponse value) => value.writeToBuffer()));
   }
 
   $async.Future<$0.Empty> signup_Pre(
@@ -76,8 +98,15 @@ abstract class UserServiceBase extends $grpc.Service {
     return getCurrentUser(call, await request);
   }
 
+  $async.Future<$4.GetReferralTokenResponse> getReferralToken_Pre(
+      $grpc.ServiceCall call, $async.Future<$0.Empty> request) async {
+    return getReferralToken(call, await request);
+  }
+
   $async.Future<$0.Empty> signup(
       $grpc.ServiceCall call, $4.SignupRequest request);
   $async.Future<$4.GetCurrentUserResponse> getCurrentUser(
+      $grpc.ServiceCall call, $0.Empty request);
+  $async.Future<$4.GetReferralTokenResponse> getReferralToken(
       $grpc.ServiceCall call, $0.Empty request);
 }
