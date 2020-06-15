@@ -6,7 +6,7 @@ import "util.proto";
 service UserService {
 	rpc Signup (SignupRequest) returns (Empty);
 	rpc GetCurrentUser(Empty) returns (GetCurrentUserResponse);
-	rpc GetReferralToken(Empty) returns (GetReferralTokenResponse)
+	rpc GetReferralToken(Empty) returns (GetReferralTokenResponse);
 }
 
 message SignupRequest {
