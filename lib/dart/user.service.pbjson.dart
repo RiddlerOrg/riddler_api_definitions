@@ -11,6 +11,7 @@ const SignupRequest$json = const {
     const {'1': 'firebaseUid', '3': 1, '4': 1, '5': 9, '10': 'firebaseUid'},
     const {'1': 'username', '3': 2, '4': 1, '5': 9, '10': 'username'},
     const {'1': 'email', '3': 3, '4': 1, '5': 9, '10': 'email'},
+    const {'1': 'referralToken', '3': 4, '4': 1, '5': 9, '10': 'referralToken'},
   ],
 };
 

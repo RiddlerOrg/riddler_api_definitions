@@ -15,6 +15,7 @@ class SignupRequest extends $pb.GeneratedMessage {
     ..aOS(1, 'firebaseUid', protoName: 'firebaseUid')
     ..aOS(2, 'username')
     ..aOS(3, 'email')
+    ..aOS(4, 'referralToken', protoName: 'referralToken')
     ..hasRequiredFields = false
   ;
 
@@ -59,6 +60,15 @@ class SignupRequest extends $pb.GeneratedMessage {
   $core.bool hasEmail() => $_has(2);
   @$pb.TagNumber(3)
   void clearEmail() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get referralToken => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set referralToken($core.String v) { $_setString(3, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasReferralToken() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearReferralToken() => clearField(4);
 }
 
 class GetCurrentUserResponse extends $pb.GeneratedMessage {
