@@ -19,6 +19,7 @@ message GetCurrentPrizeResponse {
 	repeated string unlockedHints = 8;
 	int64 soonestNextHintPurchase = 9;
 	float marketPrice = 10;
+	bool hasReferralUnlock = 11;
 }
 
 message AnswerRiddleRequest {

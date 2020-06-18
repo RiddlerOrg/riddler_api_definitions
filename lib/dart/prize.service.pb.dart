@@ -22,6 +22,7 @@ class GetCurrentPrizeResponse extends $pb.GeneratedMessage {
     ..pPS(8, 'unlockedHints', protoName: 'unlockedHints')
     ..aInt64(9, 'soonestNextHintPurchase', protoName: 'soonestNextHintPurchase')
     ..a<$core.double>(10, 'marketPrice', $pb.PbFieldType.OF, protoName: 'marketPrice')
+    ..aOB(11, 'hasReferralUnlock', protoName: 'hasReferralUnlock')
     ..hasRequiredFields = false
   ;
 
@@ -117,6 +118,15 @@ class GetCurrentPrizeResponse extends $pb.GeneratedMessage {
   $core.bool hasMarketPrice() => $_has(9);
   @$pb.TagNumber(10)
   void clearMarketPrice() => clearField(10);
+
+  @$pb.TagNumber(11)
+  $core.bool get hasReferralUnlock => $_getBF(10);
+  @$pb.TagNumber(11)
+  set hasReferralUnlock($core.bool v) { $_setBool(10, v); }
+  @$pb.TagNumber(11)
+  $core.bool hasHasReferralUnlock() => $_has(10);
+  @$pb.TagNumber(11)
+  void clearHasReferralUnlock() => clearField(11);
 }
 
 class AnswerRiddleRequest extends $pb.GeneratedMessage {
