@@ -2,8 +2,8 @@
 //  Generated code. Do not modify.
 //  source: prize.service.proto
 //
-// @dart = 2.3
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
 
 import 'dart:core' as $core;
 
@@ -11,27 +11,83 @@ import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class GetCurrentPrizeResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetCurrentPrizeResponse', package: const $pb.PackageName('api'), createEmptyInstance: create)
-    ..a<$fixnum.Int64>(1, 'id', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..aOS(2, 'title')
-    ..aOB(3, 'isWon', protoName: 'isWon')
-    ..pPS(4, 'photos')
-    ..aOS(5, 'riddle')
-    ..a<$fixnum.Int64>(6, 'guessCount', $pb.PbFieldType.OU6, protoName: 'guessCount', defaultOrMaker: $fixnum.Int64.ZERO)
-    ..a<$fixnum.Int64>(7, 'availableHints', $pb.PbFieldType.OU6, protoName: 'availableHints', defaultOrMaker: $fixnum.Int64.ZERO)
-    ..pPS(8, 'unlockedHints', protoName: 'unlockedHints')
-    ..aInt64(9, 'soonestNextHintPurchase', protoName: 'soonestNextHintPurchase')
-    ..a<$core.double>(10, 'marketPrice', $pb.PbFieldType.OF, protoName: 'marketPrice')
-    ..aOB(11, 'hasReferralUnlock', protoName: 'hasReferralUnlock')
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'GetCurrentPrizeResponse', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'api'), createEmptyInstance: create)
+    ..a<$fixnum.Int64>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'title')
+    ..aOB(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isWon', protoName: 'isWon')
+    ..pPS(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'photos')
+    ..aOS(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'riddle')
+    ..a<$fixnum.Int64>(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'guessCount', $pb.PbFieldType.OU6, protoName: 'guessCount', defaultOrMaker: $fixnum.Int64.ZERO)
+    ..a<$fixnum.Int64>(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'availableHints', $pb.PbFieldType.OU6, protoName: 'availableHints', defaultOrMaker: $fixnum.Int64.ZERO)
+    ..pPS(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'unlockedHints', protoName: 'unlockedHints')
+    ..aInt64(9, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'soonestNextHintPurchase', protoName: 'soonestNextHintPurchase')
+    ..a<$core.double>(10, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'marketPrice', $pb.PbFieldType.OF, protoName: 'marketPrice')
+    ..aOB(11, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'hasReferralUnlock', protoName: 'hasReferralUnlock')
     ..hasRequiredFields = false
   ;
 
   GetCurrentPrizeResponse._() : super();
-  factory GetCurrentPrizeResponse() => create();
+  factory GetCurrentPrizeResponse({
+    $fixnum.Int64? id,
+    $core.String? title,
+    $core.bool? isWon,
+    $core.Iterable<$core.String>? photos,
+    $core.String? riddle,
+    $fixnum.Int64? guessCount,
+    $fixnum.Int64? availableHints,
+    $core.Iterable<$core.String>? unlockedHints,
+    $fixnum.Int64? soonestNextHintPurchase,
+    $core.double? marketPrice,
+    $core.bool? hasReferralUnlock,
+  }) {
+    final _result = create();
+    if (id != null) {
+      _result.id = id;
+    }
+    if (title != null) {
+      _result.title = title;
+    }
+    if (isWon != null) {
+      _result.isWon = isWon;
+    }
+    if (photos != null) {
+      _result.photos.addAll(photos);
+    }
+    if (riddle != null) {
+      _result.riddle = riddle;
+    }
+    if (guessCount != null) {
+      _result.guessCount = guessCount;
+    }
+    if (availableHints != null) {
+      _result.availableHints = availableHints;
+    }
+    if (unlockedHints != null) {
+      _result.unlockedHints.addAll(unlockedHints);
+    }
+    if (soonestNextHintPurchase != null) {
+      _result.soonestNextHintPurchase = soonestNextHintPurchase;
+    }
+    if (marketPrice != null) {
+      _result.marketPrice = marketPrice;
+    }
+    if (hasReferralUnlock != null) {
+      _result.hasReferralUnlock = hasReferralUnlock;
+    }
+    return _result;
+  }
   factory GetCurrentPrizeResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory GetCurrentPrizeResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   GetCurrentPrizeResponse clone() => GetCurrentPrizeResponse()..mergeFromMessage(this);
-  GetCurrentPrizeResponse copyWith(void Function(GetCurrentPrizeResponse) updates) => super.copyWith((message) => updates(message as GetCurrentPrizeResponse));
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  GetCurrentPrizeResponse copyWith(void Function(GetCurrentPrizeResponse) updates) => super.copyWith((message) => updates(message as GetCurrentPrizeResponse)) as GetCurrentPrizeResponse; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static GetCurrentPrizeResponse create() => GetCurrentPrizeResponse._();
@@ -39,7 +95,7 @@ class GetCurrentPrizeResponse extends $pb.GeneratedMessage {
   static $pb.PbList<GetCurrentPrizeResponse> createRepeated() => $pb.PbList<GetCurrentPrizeResponse>();
   @$core.pragma('dart2js:noInline')
   static GetCurrentPrizeResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<GetCurrentPrizeResponse>(create);
-  static GetCurrentPrizeResponse _defaultInstance;
+  static GetCurrentPrizeResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
   $fixnum.Int64 get id => $_getI64(0);
@@ -130,17 +186,33 @@ class GetCurrentPrizeResponse extends $pb.GeneratedMessage {
 }
 
 class AnswerRiddleRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('AnswerRiddleRequest', package: const $pb.PackageName('api'), createEmptyInstance: create)
-    ..aOS(1, 'answer')
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'AnswerRiddleRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'api'), createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'answer')
     ..hasRequiredFields = false
   ;
 
   AnswerRiddleRequest._() : super();
-  factory AnswerRiddleRequest() => create();
+  factory AnswerRiddleRequest({
+    $core.String? answer,
+  }) {
+    final _result = create();
+    if (answer != null) {
+      _result.answer = answer;
+    }
+    return _result;
+  }
   factory AnswerRiddleRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory AnswerRiddleRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   AnswerRiddleRequest clone() => AnswerRiddleRequest()..mergeFromMessage(this);
-  AnswerRiddleRequest copyWith(void Function(AnswerRiddleRequest) updates) => super.copyWith((message) => updates(message as AnswerRiddleRequest));
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  AnswerRiddleRequest copyWith(void Function(AnswerRiddleRequest) updates) => super.copyWith((message) => updates(message as AnswerRiddleRequest)) as AnswerRiddleRequest; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static AnswerRiddleRequest create() => AnswerRiddleRequest._();
@@ -148,7 +220,7 @@ class AnswerRiddleRequest extends $pb.GeneratedMessage {
   static $pb.PbList<AnswerRiddleRequest> createRepeated() => $pb.PbList<AnswerRiddleRequest>();
   @$core.pragma('dart2js:noInline')
   static AnswerRiddleRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<AnswerRiddleRequest>(create);
-  static AnswerRiddleRequest _defaultInstance;
+  static AnswerRiddleRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get answer => $_getSZ(0);
@@ -161,17 +233,33 @@ class AnswerRiddleRequest extends $pb.GeneratedMessage {
 }
 
 class AnswerRiddleResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('AnswerRiddleResponse', package: const $pb.PackageName('api'), createEmptyInstance: create)
-    ..aOB(1, 'isCorrect', protoName: 'isCorrect')
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'AnswerRiddleResponse', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'api'), createEmptyInstance: create)
+    ..aOB(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isCorrect', protoName: 'isCorrect')
     ..hasRequiredFields = false
   ;
 
   AnswerRiddleResponse._() : super();
-  factory AnswerRiddleResponse() => create();
+  factory AnswerRiddleResponse({
+    $core.bool? isCorrect,
+  }) {
+    final _result = create();
+    if (isCorrect != null) {
+      _result.isCorrect = isCorrect;
+    }
+    return _result;
+  }
   factory AnswerRiddleResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory AnswerRiddleResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   AnswerRiddleResponse clone() => AnswerRiddleResponse()..mergeFromMessage(this);
-  AnswerRiddleResponse copyWith(void Function(AnswerRiddleResponse) updates) => super.copyWith((message) => updates(message as AnswerRiddleResponse));
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  AnswerRiddleResponse copyWith(void Function(AnswerRiddleResponse) updates) => super.copyWith((message) => updates(message as AnswerRiddleResponse)) as AnswerRiddleResponse; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static AnswerRiddleResponse create() => AnswerRiddleResponse._();
@@ -179,7 +267,7 @@ class AnswerRiddleResponse extends $pb.GeneratedMessage {
   static $pb.PbList<AnswerRiddleResponse> createRepeated() => $pb.PbList<AnswerRiddleResponse>();
   @$core.pragma('dart2js:noInline')
   static AnswerRiddleResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<AnswerRiddleResponse>(create);
-  static AnswerRiddleResponse _defaultInstance;
+  static AnswerRiddleResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.bool get isCorrect => $_getBF(0);

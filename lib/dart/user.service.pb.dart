@@ -2,8 +2,8 @@
 //  Generated code. Do not modify.
 //  source: user.service.proto
 //
-// @dart = 2.3
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
 
 import 'dart:core' as $core;
 
@@ -11,20 +11,48 @@ import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class SignupRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('SignupRequest', package: const $pb.PackageName('api'), createEmptyInstance: create)
-    ..aOS(1, 'firebaseUid', protoName: 'firebaseUid')
-    ..aOS(2, 'username')
-    ..aOS(3, 'email')
-    ..aOS(4, 'referralToken', protoName: 'referralToken')
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'SignupRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'api'), createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'firebaseUid', protoName: 'firebaseUid')
+    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'username')
+    ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'email')
+    ..aOS(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'referralToken', protoName: 'referralToken')
     ..hasRequiredFields = false
   ;
 
   SignupRequest._() : super();
-  factory SignupRequest() => create();
+  factory SignupRequest({
+    $core.String? firebaseUid,
+    $core.String? username,
+    $core.String? email,
+    $core.String? referralToken,
+  }) {
+    final _result = create();
+    if (firebaseUid != null) {
+      _result.firebaseUid = firebaseUid;
+    }
+    if (username != null) {
+      _result.username = username;
+    }
+    if (email != null) {
+      _result.email = email;
+    }
+    if (referralToken != null) {
+      _result.referralToken = referralToken;
+    }
+    return _result;
+  }
   factory SignupRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory SignupRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   SignupRequest clone() => SignupRequest()..mergeFromMessage(this);
-  SignupRequest copyWith(void Function(SignupRequest) updates) => super.copyWith((message) => updates(message as SignupRequest));
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  SignupRequest copyWith(void Function(SignupRequest) updates) => super.copyWith((message) => updates(message as SignupRequest)) as SignupRequest; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static SignupRequest create() => SignupRequest._();
@@ -32,7 +60,7 @@ class SignupRequest extends $pb.GeneratedMessage {
   static $pb.PbList<SignupRequest> createRepeated() => $pb.PbList<SignupRequest>();
   @$core.pragma('dart2js:noInline')
   static SignupRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SignupRequest>(create);
-  static SignupRequest _defaultInstance;
+  static SignupRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get firebaseUid => $_getSZ(0);
@@ -72,21 +100,53 @@ class SignupRequest extends $pb.GeneratedMessage {
 }
 
 class GetCurrentUserResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetCurrentUserResponse', package: const $pb.PackageName('api'), createEmptyInstance: create)
-    ..a<$fixnum.Int64>(1, 'id', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..aOS(2, 'username')
-    ..aOS(3, 'email')
-    ..a<$fixnum.Int64>(4, 'guessTokens', $pb.PbFieldType.OU6, protoName: 'guessTokens', defaultOrMaker: $fixnum.Int64.ZERO)
-    ..aInt64(5, 'soonestNextGuess', protoName: 'soonestNextGuess')
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'GetCurrentUserResponse', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'api'), createEmptyInstance: create)
+    ..a<$fixnum.Int64>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'username')
+    ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'email')
+    ..a<$fixnum.Int64>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'guessTokens', $pb.PbFieldType.OU6, protoName: 'guessTokens', defaultOrMaker: $fixnum.Int64.ZERO)
+    ..aInt64(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'soonestNextGuess', protoName: 'soonestNextGuess')
     ..hasRequiredFields = false
   ;
 
   GetCurrentUserResponse._() : super();
-  factory GetCurrentUserResponse() => create();
+  factory GetCurrentUserResponse({
+    $fixnum.Int64? id,
+    $core.String? username,
+    $core.String? email,
+    $fixnum.Int64? guessTokens,
+    $fixnum.Int64? soonestNextGuess,
+  }) {
+    final _result = create();
+    if (id != null) {
+      _result.id = id;
+    }
+    if (username != null) {
+      _result.username = username;
+    }
+    if (email != null) {
+      _result.email = email;
+    }
+    if (guessTokens != null) {
+      _result.guessTokens = guessTokens;
+    }
+    if (soonestNextGuess != null) {
+      _result.soonestNextGuess = soonestNextGuess;
+    }
+    return _result;
+  }
   factory GetCurrentUserResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory GetCurrentUserResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   GetCurrentUserResponse clone() => GetCurrentUserResponse()..mergeFromMessage(this);
-  GetCurrentUserResponse copyWith(void Function(GetCurrentUserResponse) updates) => super.copyWith((message) => updates(message as GetCurrentUserResponse));
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  GetCurrentUserResponse copyWith(void Function(GetCurrentUserResponse) updates) => super.copyWith((message) => updates(message as GetCurrentUserResponse)) as GetCurrentUserResponse; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static GetCurrentUserResponse create() => GetCurrentUserResponse._();
@@ -94,7 +154,7 @@ class GetCurrentUserResponse extends $pb.GeneratedMessage {
   static $pb.PbList<GetCurrentUserResponse> createRepeated() => $pb.PbList<GetCurrentUserResponse>();
   @$core.pragma('dart2js:noInline')
   static GetCurrentUserResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<GetCurrentUserResponse>(create);
-  static GetCurrentUserResponse _defaultInstance;
+  static GetCurrentUserResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
   $fixnum.Int64 get id => $_getI64(0);
@@ -143,18 +203,38 @@ class GetCurrentUserResponse extends $pb.GeneratedMessage {
 }
 
 class GetReferralTokenResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetReferralTokenResponse', package: const $pb.PackageName('api'), createEmptyInstance: create)
-    ..aOS(1, 'token')
-    ..aOB(2, 'isClaimed', protoName: 'isClaimed')
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'GetReferralTokenResponse', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'api'), createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'token')
+    ..aOB(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'isClaimed', protoName: 'isClaimed')
     ..hasRequiredFields = false
   ;
 
   GetReferralTokenResponse._() : super();
-  factory GetReferralTokenResponse() => create();
+  factory GetReferralTokenResponse({
+    $core.String? token,
+    $core.bool? isClaimed,
+  }) {
+    final _result = create();
+    if (token != null) {
+      _result.token = token;
+    }
+    if (isClaimed != null) {
+      _result.isClaimed = isClaimed;
+    }
+    return _result;
+  }
   factory GetReferralTokenResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory GetReferralTokenResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
   GetReferralTokenResponse clone() => GetReferralTokenResponse()..mergeFromMessage(this);
-  GetReferralTokenResponse copyWith(void Function(GetReferralTokenResponse) updates) => super.copyWith((message) => updates(message as GetReferralTokenResponse));
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  GetReferralTokenResponse copyWith(void Function(GetReferralTokenResponse) updates) => super.copyWith((message) => updates(message as GetReferralTokenResponse)) as GetReferralTokenResponse; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static GetReferralTokenResponse create() => GetReferralTokenResponse._();
@@ -162,7 +242,7 @@ class GetReferralTokenResponse extends $pb.GeneratedMessage {
   static $pb.PbList<GetReferralTokenResponse> createRepeated() => $pb.PbList<GetReferralTokenResponse>();
   @$core.pragma('dart2js:noInline')
   static GetReferralTokenResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<GetReferralTokenResponse>(create);
-  static GetReferralTokenResponse _defaultInstance;
+  static GetReferralTokenResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get token => $_getSZ(0);
