@@ -2,8 +2,8 @@
 //  Generated code. Do not modify.
 //  source: user.service.proto
 //
-// @dart = 2.3
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
 
 import 'dart:async' as $async;
 
@@ -32,32 +32,26 @@ class UserServiceClient extends $grpc.Client {
           ($core.List<$core.int> value) =>
               $4.GetReferralTokenResponse.fromBuffer(value));
 
-  UserServiceClient($grpc.ClientChannel channel, {$grpc.CallOptions options})
-      : super(channel, options: options);
+  UserServiceClient($grpc.ClientChannel channel,
+      {$grpc.CallOptions? options,
+      $core.Iterable<$grpc.ClientInterceptor>? interceptors})
+      : super(channel, options: options, interceptors: interceptors);
 
   $grpc.ResponseFuture<$0.Empty> signup($4.SignupRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(_$signup, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$signup, request, options: options);
   }
 
   $grpc.ResponseFuture<$4.GetCurrentUserResponse> getCurrentUser(
       $0.Empty request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$getCurrentUser, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getCurrentUser, request, options: options);
   }
 
   $grpc.ResponseFuture<$4.GetReferralTokenResponse> getReferralToken(
       $0.Empty request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$getReferralToken, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getReferralToken, request, options: options);
   }
 }
 

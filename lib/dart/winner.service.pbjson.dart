@@ -2,9 +2,13 @@
 //  Generated code. Do not modify.
 //  source: winner.service.proto
 //
-// @dart = 2.3
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields,deprecated_member_use_from_same_package
 
+import 'dart:core' as $core;
+import 'dart:convert' as $convert;
+import 'dart:typed_data' as $typed_data;
+@$core.Deprecated('Use getWinnersResponseDescriptor instead')
 const GetWinnersResponse$json = const {
   '1': 'GetWinnersResponse',
   '2': const [
@@ -12,6 +16,9 @@ const GetWinnersResponse$json = const {
   ],
 };
 
+/// Descriptor for `GetWinnersResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getWinnersResponseDescriptor = $convert.base64Decode('ChJHZXRXaW5uZXJzUmVzcG9uc2USJQoHd2lubmVycxgBIAMoCzILLmFwaS5XaW5uZXJSB3dpbm5lcnM=');
+@$core.Deprecated('Use winnerDescriptor instead')
 const Winner$json = const {
   '1': 'Winner',
   '2': const [
@@ -28,3 +35,5 @@ const Winner$json = const {
   ],
 };
 
+/// Descriptor for `Winner`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List winnerDescriptor = $convert.base64Decode('CgZXaW5uZXISGAoHcHJpemVJZBgBIAEoBFIHcHJpemVJZBIeCgpwcml6ZVRpdGxlGAIgASgJUgpwcml6ZVRpdGxlEioKEHByaXplTWFya2V0UHJpY2UYAyABKAJSEHByaXplTWFya2V0UHJpY2USIAoLcHJpemVQaG90b3MYBCADKAlSC3ByaXplUGhvdG9zEh4KCmd1ZXNzQ291bnQYBSABKARSCmd1ZXNzQ291bnQSFgoGcmlkZGxlGAYgASgJUgZyaWRkbGUSJgoOYWNjZXB0ZWRBbnN3ZXIYByABKAlSDmFjY2VwdGVkQW5zd2VyEhwKCXRpbWVPZldpbhgIIAEoA1IJdGltZU9mV2luEhoKCHdpbm5lcklkGAkgASgEUgh3aW5uZXJJZBIeCgp3aW5uZXJOYW1lGAogASgJUgp3aW5uZXJOYW1l');
